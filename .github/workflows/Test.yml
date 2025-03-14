@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: '23'
     - name: install npm 
-      run:  install ci
+      run:  npm ci
     - name: Build Project
       run: npm run build
     - name: Deploy
