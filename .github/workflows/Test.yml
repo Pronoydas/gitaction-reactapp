@@ -13,4 +13,20 @@ jobs:
     - name: install npm
       run : npm ci 
     - name: Execute Test script 
-      run: npm run test    
+      run: npm run test
+  deploy:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Download Code 
+      uses: actions/checkout@v3
+    - name: Install Node Js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '23'
+    - name: install npm 
+      run:  install ci
+    - name: Build Project
+      run: npm run build
+    - name: Deploy
+      run: echo "Deployment Complete"      
+
