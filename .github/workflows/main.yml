@@ -5,7 +5,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: Download Code
-      uses: action/checkout@v3
+      uses: action/checkout@v4
     - name: Install Node 
       uses: actions/setup-node@v4
       with:
